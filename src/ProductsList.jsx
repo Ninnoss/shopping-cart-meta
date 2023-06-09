@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import Product from './Product';
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products, onAddToCart }) => {
   return (
     <div>
       <h1>Products List</h1>
       {products.map((product) => (
-        <Product 
+        <Product
+          onAddToCart={onAddToCart}
           key={product.id}
           product={product}
         />
